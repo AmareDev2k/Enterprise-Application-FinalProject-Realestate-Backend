@@ -1,3 +1,29 @@
 spring:
   application:
     name: management
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/realestate?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 2004nuttertools
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db.migration
+    baseline-on-migrate: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ඔයාගේ_gmail_address
+    password: ඔයාගේ_gmail_app_password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8080
